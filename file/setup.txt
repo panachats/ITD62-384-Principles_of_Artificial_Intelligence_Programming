@@ -1,0 +1,15 @@
+Pip Installation
+1. esptool
+2. adafruit-ampy
+
+Erase Flash
+>> esptool --chip esp32 --port COM10 erase_flash
+
+Burn OS 
+>> esptool --port COM10 write_flash -z 0x1000 D:\Code\RealProject\main\MLXTest\esp32-20220618-v1.19.1.bin
+	
+List files in Board
+>> ampy --port COM10 --baud 115200 ls
+
+Remove file
+>> ampy --port COM10 rm main.py
